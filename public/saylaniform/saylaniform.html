@@ -1,0 +1,307 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAYLANI REGISTRATION FORM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./saylaniform.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="https://dmhqppb4umb6.cloudfront.net/saylani-logo.png"
+        alt="logo"
+      />
+      <h2>STUDENT REGISTRATION FORM</h2>
+    </div>
+    
+    <form  style="display: flex; flex-direction: column; flex-wrap: wrap;" action="./formsubmitted.html" target="_self" ">
+      <table>
+        <tr>
+          <td><label for="firstname">FIRST NAME</label></td>
+          <td>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Enter First Name"
+              maxlength="30"
+            /><label class="lblvalidate">(max 30 characters a-z or A-Z)</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="lastname">LAST NAME</label></td>
+          <td>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Enter Last Name"
+            /><label class="lblvalidate">(max 30 characters a-z or A-Z)</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="day">DATE OF BIRTH</label></td>
+          <td>
+            <select name="DAY">
+              <option value="" id="day" disabled selected>DAY</option
+              ><option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option></select
+            ><select name="MONTH">
+              <option value="" disabled selected>MONTH</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option></select
+            ><select name="YEAR">
+              <option value="" disabled selected>YEAR</option
+              ><option value="1990">1990</option>
+              <option value="1991">1991</option>
+              <option value="1992">1992</option>
+              <option value="1993">1993</option>
+              <option value="1994">1994</option></select
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">EMAIL</label></td>
+          <td>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email Address"
+              required
+            /><label class="lblvalidate">(* Required)</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="mobileno.">MOBILE NUMBER</label></td>
+          <td>
+            <input
+              type="tel"
+              id="mobileno."
+              name="mobileno."
+              placeholder="Enter Mobile No."
+              pattern="[0-9]{3}-[0-9]{7}"
+              required
+            /><label class="lblvalidate">(* Required 10-digit mobile no. 331-0000000)</label>
+          </td>
+        </tr>
+        <tr>
+          <td>GENDER</td>
+          <td colspan="2">
+            Male<input type="radio" name="gender" value="male" />Female<input
+              type="radio"
+              name="gender"
+              value="female"
+            />Other<input
+              type="radio"
+              name="gender"
+              value="other"
+            /><label></label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="address">ADDRESS</label></td>
+          <td><textarea rows="4" id="address" cols="50"></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="city">CITY</label></td>
+          <td>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Enter City Name"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pincode">PINCODE</label></td>
+          <td>
+            <input
+              type="text"
+              id="pincode"
+              name="pincode"
+              pattern="[0-9]{5}"
+              placeholder="Enter Pincode"
+            />
+            <label class="lblvalidate">(5-Digit Pincode-12345)</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="state">STATE</label></td>
+          <td>
+            <input
+              type="text"
+              id="state"
+              name="state"
+              placeholder="Enter State"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="country">COUNTRY</label></td>
+          <td>
+            <input
+              type="text"
+              id="country"
+              name="country"
+              placeholder="Enter Country"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>HOBBIES</td>
+          <td colspan="2">
+            Drawing<input type="checkbox" name="hobbies" value="drawing" />
+            Singing<input type="checkbox" name="hobbies" value="Singing" />
+            Dancing<input type="checkbox" name="hobbies" value="Dancing" />
+            Stretching<input
+              type="checkbox"
+              name="hobbies"
+              value="Strecthing"
+            />
+            Others<input type="checkbox" for="others" name="hobbies" /><input id="others"
+              type="text"
+              name="hobbies"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="qualification">QUALIFICATION</label></td>
+          <td>
+            <table>
+              <tr>
+                <th style="width: 80px; text-align: left;">S.No</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td>
+                  <input
+                    type="text"
+                    id="qualification"
+                    name="board"
+                    maxlength="10"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="center"
+                    type="text"
+                    name="percentage"
+                    step="0.01"
+                  />
+                </td>
+                <td class="center">
+                  <input
+                    class="center"
+                    type="text"
+                    maxlength="4"
+                    name="Yearofpassing"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board" maxlength="10" /></td>
+                <td>
+                  <input
+                    class="center"
+                    type="text"
+                    name="percentage"
+                    step="0.01"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="center"
+                    type="text"
+                    maxlength="4"
+                    name="Yearofpassing"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="board" maxlength="10" /></td>
+                <td>
+                  <input
+                    class="center"
+                    type="text"
+                    name="percentage"
+                    step="0.01"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="center"
+                    type="text"
+                    maxlength="4"
+                    name="Yearofpassing"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board" maxlength="10" /></td>
+                <td>
+                  <input
+                    class="center"
+                    type="text"
+                    name="percentage"
+                    step="0.01"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="center"
+                    type="text"
+                    maxlength="4"
+                    name="Yearofpassing"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" align="right"><label class="lblvalidate">(max 10 characters)</label></td>
+                <td align="right"><label class="lblvalidate">(upto 2 decimals)</label></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>COURSES APPLIED FOR</td>
+          <td colspan="2">
+            SQL<input type="radio" name="course-applied-for" />B.Com<input
+              type="radio"
+              name="course-applied-for"
+              required
+            />B.Sc<input type="radio" name="course-applied-for" />B.A<input
+              type="radio"
+              name="course-applied-for"
+            />
+            <label class="lblvalidate">(* Required Atleast One Course)</label>
+          </td>
+        </tr>
+      </table>
+      <div class="submit-reset-btn">
+        <input type="submit" />
+        <input type="reset" />
+      </div>
+    </form>
+  <a href="https://saylaniportfolio.web.app/">Back To Portfolio</a>
+  </body>
+</html>
