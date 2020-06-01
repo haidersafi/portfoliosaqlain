@@ -11,7 +11,7 @@ body{
         max-width:900px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content:center;
     
        
     }
@@ -31,7 +31,8 @@ body{
         align-items: center;
         margin-left: 2px;
         min-width: 250px;
-      
+        margin-bottom: 2px;
+        border-radius: 5px;
     }
     .periodic{
         background: rgb(0,0,0);
@@ -68,17 +69,24 @@ opacity: 0.7;
     }
     
     a>div{
-border:1px solid black;
 height: 100%;
 width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+border-radius: 10px;
+
 
     }
     .homepage{
         background: rgb(94, 94, 134);
     }
     .homepage:hover{
+        opacity: 0.7;
+    }
+    .onlineclothing{
+        background-color: #FF5252;
+    }
+    .onlineclothing:hover{
         opacity: 0.7;
     }
